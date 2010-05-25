@@ -79,4 +79,3 @@
 (add-hook 'textmate-mode-hook 'peepopen-bind-keys)
 
 (provide 'peepopen)
-
