@@ -75,6 +75,13 @@
 (global-set-key [(control shift l)] 'recenter-to-top)
 
 
+(defun kill-current-line ()
+  "Kill the current line, no matter where the cursor is."
+  (interactive)
+  (textmate-select-line) (kill-region (region-beginning) (region-end)))
+(global-set-key [(control shift k)] 'kill-current-line)
+
+
 (defun kill-word-and-capitalize (arg)
   "Delete one or more words and capitalize next word.
 With argument, do it a number of times.
