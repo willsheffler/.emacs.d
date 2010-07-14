@@ -23,6 +23,7 @@
         ("Hash Method"  "^\\s-*\\(\\w+\\):\\s-*function\\s-*(" 1)
         ("Instance Method" "this\.\\(\\w+\\)\\s-*=\\s-*function\\s-*(" 1)
         ("Variable as Class" "var \\([A-Z]+\\w+\\) = {" 1)
+        ("Assigned Function" "^\\s-*\\([A-z.]+\\w\\) = function\\s-*(.*) {" 1)
         ))
 
 (add-hook 'javascript-mode-hook
