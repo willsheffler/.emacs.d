@@ -42,6 +42,11 @@
 ;; ruby-mode
 (require 'topfunky/sinatra)
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/ruby-complexity"))
+(add-to-list 'auto-mode-alist '("\\.sake\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Isolate\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile\\'" . ruby-mode))
+
 (require 'linum)
 (require 'ruby-complexity)
 ;; (add-hook 'ruby-mode-hook
