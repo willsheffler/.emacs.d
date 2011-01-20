@@ -38,6 +38,8 @@
 
 (require 'topfunky/python)
 
+(require 'topfunky/coffee)
+
 ;; ruby-mode
 (require 'topfunky/sinatra)
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/ruby-complexity"))
@@ -121,5 +123,7 @@
 (load (concat dotfiles-dir "topfunky/theme.el"))
 (color-theme-topfunky)
 
+
 (require 'autotest)
+
 
