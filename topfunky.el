@@ -38,7 +38,7 @@
 
 (require 'topfunky/python)
 
-(require 'topfunky/coffee)
+;;(require 'topfunky/coffee)
 
 ;; ruby-mode
 (require 'topfunky/sinatra)
