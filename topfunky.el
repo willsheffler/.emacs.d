@@ -32,6 +32,7 @@
 (require 'peepopen)
 (require 'topfunky/textmate-ext)
 (textmate-mode)
+(setq ns-pop-up-frames nil)
 
 (require 'whitespace)
 
@@ -40,10 +41,11 @@
 ;; ruby-mode
 (require 'topfunky/sinatra)
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/ruby-complexity"))
-(add-to-list 'auto-mode-alist '("\\.sake\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Isolate\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru\\'"   . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.sake\\'" . ruby-mode))
 
 (require 'linum)
 (require 'ruby-complexity)
@@ -118,3 +120,6 @@
 ;; Activate theme
 (load (concat dotfiles-dir "topfunky/theme.el"))
 (color-theme-topfunky)
+
+(require 'autotest)
+
