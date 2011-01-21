@@ -28,15 +28,23 @@
 
 (add-hook 'javascript-mode-hook
           (lambda ()
-            (setq imenu-generic-expression topfunky-js-imenu-generic-expression)))
+            (setq imenu-generic-expression topfunky-js-imenu-generic-expression)
+            (setq indent-region-function topfunky-js-beautify)))
 
 ;; Run jslint on a file to check syntax and coding conventions.
 (add-hook 'javascript-mode-hook
           (lambda ()
             (set (make-local-variable 'compile-command)
                  (let ((file (file-name-nondirectory buffer-file-name)))
-                   (concat "java -classpath ~/src/rhino1_7R2/build/classes org.mozilla.javascript.tools.shell.Main ~/bin/src/jslint.js " file)))))
+                   (concat "node ~/src/reid-node-jslint/bin/jslint.js " file)))))
 
-
+(defun tf-beautify-js ()
+  "Run source through JavaScript beautifier."
+  (interactive)
+  ;; TODO: Doesn't save cursor location
+  (save-excursion
+    (shell-command-on-region
+     (point-min) (point-max)
+     "~/bin/beautify-js" t t)))
 
 (provide 'topfunky/js)
