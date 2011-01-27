@@ -12,4 +12,14 @@
   (revert-buffer t t t))
 (global-set-key [f5] 'refresh-file)
 
+(defun duplicate-line ()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank))
+(global-set-key (kbd "C-d") 'duplicate-line)
+
 (provide 'topfunky/plain-text)
