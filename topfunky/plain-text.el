@@ -20,6 +20,6 @@
   (open-line 1)
   (next-line 1)
   (yank))
-(global-set-key (kbd "C-d") 'duplicate-line)
+(global-set-key [(control shift d)] 'duplicate-line)
 
 (provide 'topfunky/plain-text)
