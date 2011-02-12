@@ -5,6 +5,7 @@
 (defun timestamp-for-org ()
   "Insert string for the current time formatted like '2011-01-01 Thu 13:54'."
   (interactive)
+  (end-of-line)
   (insert (format-time-string "<%Y-%m-%d %a %H:%M>")))
 
 ;; Override

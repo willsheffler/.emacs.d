@@ -26,8 +26,8 @@
 (setq backup-directory-alist (list (cons "." backup-dir)))
 
 ;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
-(setq default-tab-width 4)
-(setq tab-width 4)
+(setq default-tab-width 2)
+(setq tab-width 2)
 
 
 (defun byte-recompile-home ()
@@ -73,6 +73,13 @@
   (interactive)
   (recenter 3))
 (global-set-key [(control shift l)] 'recenter-to-top)
+
+(defun recenter-to-bottom ()
+  "Take the current point and scroll it to within a
+   few lines of the bottom of the screen."
+  (interactive)
+  (recenter -3))
+(global-set-key [(control meta l)] 'recenter-to-bottom)
 
 
 (defun kill-current-line ()
