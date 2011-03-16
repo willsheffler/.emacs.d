@@ -14,9 +14,9 @@
 ;; USAGE:
 ;;   (require 'topfunky/js)
 
-(setq js2-basic-offset 4)
+(setq js2-basic-offset 2)
 (setq js2-auto-indent-flag nil)
-(setq javascript-indent-level 4)
+(setq javascript-indent-level 2)
 
 (setq topfunky-js-imenu-generic-expression
       '(("Named Function" "function\\s-+\\(\\w+\\)\\s-*(" 1)
