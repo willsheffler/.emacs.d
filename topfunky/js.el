@@ -18,6 +18,8 @@
 (setq js2-auto-indent-flag nil)
 (setq javascript-indent-level 2)
 
+(add-to-list 'auto-mode-alist '("Jimfile\\'" . javascript-mode))
+
 (setq topfunky-js-imenu-generic-expression
       '(("Named Function" "function\\s-+\\(\\w+\\)\\s-*(" 1)
         ("Hash Method"  "^\\s-*\\(\\w+\\):\\s-*function\\s-*(" 1)
