@@ -49,4 +49,9 @@
      (point-min) (point-max)
      "~/bin/beautify-js" t t)))
 
+(add-hook 'javascript-mode-hook
+          (lambda()
+            (local-set-key [(meta shift n)] 'tf-beautify-js)
+            ))
+
 (provide 'topfunky/js)
