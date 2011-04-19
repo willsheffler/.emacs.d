@@ -6,3 +6,7 @@ places
 
 /#topfunky.el#
 /url/cookies
+
+*~
+session.*
+/ac-comphist.dat
