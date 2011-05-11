@@ -14,9 +14,11 @@
 ;; USAGE:
 ;;   (require 'topfunky/js)
 
-(setq js2-basic-offset 4)
+(setq js2-basic-offset 2)
 (setq js2-auto-indent-flag nil)
-(setq javascript-indent-level 4)
+(setq javascript-indent-level 2)
+
+(add-to-list 'auto-mode-alist '("Jimfile\\'" . javascript-mode))
 
 (setq topfunky-js-imenu-generic-expression
       '(("Named Function" "function\\s-+\\(\\w+\\)\\s-*(" 1)
@@ -46,5 +48,10 @@
     (shell-command-on-region
      (point-min) (point-max)
      "~/bin/beautify-js" t t)))
+
+(add-hook 'javascript-mode-hook
+          (lambda()
+            (local-set-key [(meta shift n)] 'tf-beautify-js)
+            ))
 
 (provide 'topfunky/js)

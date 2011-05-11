@@ -38,7 +38,8 @@
 
 (require 'topfunky/python)
 
-;;(require 'topfunky/coffee)
+(require 'topfunky/coffee)
+(require 'topfunky/jade)
 
 ;; ruby-mode
 (require 'topfunky/sinatra)
