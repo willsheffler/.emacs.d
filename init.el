@@ -12,6 +12,7 @@
 ;; Benchmarking
 (defvar *emacs-load-start* (current-time))
 
+
 ;; Load path etc:
 
 (setq dotfiles-dir (file-name-directory
@@ -68,8 +69,25 @@
 
 (load "~/.emacs.d/vendor/pcmpl-ssh.el")
 
+(add-to-list 'load-path "~/.emacs.d/vendor/color-theme-6.6.0")
+(load "~/.emacs.d/vendor/color-theme-6.6.0/color-theme.el")
+(global-set-key "\M-z" 'undo)
+(global-set-key "\C-z" 'undo)
+(menu-bar-mode)
+(setq-default tab-width 1)
+(setq compile-command "source ~/home/.bashrc.build_mac.sh; cd ~/mini; clangbuild gen_homo_hc")
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-jsc-dark)
+
 
 (provide 'init)
+
+(load "~/.emacs.d/vendor/ess-5.13/lisp/ess-site")
+
+(setq ns-command-modifier 'meta)
+(setq ns-alternate-modifier 'suerp)
+(set-frame-font "droid sanr mono-11")
 
 
 ;;; init.el ends here
